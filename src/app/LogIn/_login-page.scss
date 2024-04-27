@@ -1,0 +1,61 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.login-page {
+  padding: $spacing-06;
+//   background-color: $ui-01;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 100%;
+    max-width: 400px;
+    // background-color: $ui-01;
+    // border-radius: $border-radius-01;
+    padding: $spacing-06;
+
+    h2 {
+      @include type-style('heading-01');
+      margin-bottom: $spacing-06;
+    }
+
+    label {
+      @include type-style('label-01');
+      display: block;
+      margin-bottom: $spacing-02;
+    }
+
+    input {
+      width: 100%;
+      padding: $spacing-03;
+    //   border: 1px solid $ui-03;
+    //   border-radius: $border-radius-01;
+      margin-bottom: $spacing-05;
+      transition: border-color 0.2s ease-in-out;
+
+      &:focus {
+        // border-color: $interactive-01;
+        outline: none;
+      }
+    }
+
+    button[type='submit'] {
+      width: 100%;
+      padding: $spacing-04;
+    //   background-color: $interactive-01;
+    //   color: $text-04;
+      border: none;
+    //   border-radius: $border-radius-01;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        // background-color: $interactive-02;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.cds--modal-container{
+    height: 250px;
+    padding: 15px;
+    padding-left: 55px;
+}
+
+// Modal header styles
+.modal-header {
+  margin-bottom: 20px;
+
+  // Title style
+  .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+// Modal body styles
+.cds--modal-content{
+
+  // Button styles
+  .cds--btn {
+    width: 250px;
+  }
+}
+
+.cds--modal-close{
+    display: none;
+}
+
+
+.cds--modal-footer{
+    display: none; 
+  }
