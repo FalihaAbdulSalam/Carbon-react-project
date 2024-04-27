@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -16,10 +17,15 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    setEmail('');
-    setPassword('');
+    if (email && password) {
+      console.log('Email:', email);
+      console.log('Password:', password);
+      setEmail('');
+      setPassword('');
+      window.location.href = "/home";
+    } else {
+      setErrorMessage('Please provide both email and password.');
+    }
   };
 
   return (
@@ -46,7 +52,8 @@ function LoginPage() {
             required
           />
         </div>
-       <Link href="/home"> <button type="submit">Login</button></Link>
+        <button type="submit">Login</button>
+        {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
   );
